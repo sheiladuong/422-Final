@@ -1,5 +1,5 @@
 const path = require('path');
-const { processChange } = require('../src/parser');
+const { processChange } = require('../src/parser.js');
 
 // when a csv file with one row is parsed,
 // a json file with the same row exists
