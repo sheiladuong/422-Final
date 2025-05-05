@@ -6,5 +6,5 @@ test('watch correctly outputs that file was parsed', () => {
     const output = "/test_outbound";
     const processed = "/test_processed";
 
-    expect(watch(watched, output, processed)).toThrow(console.info('Parsed /Users/sheiladuong/iste422/final-exam/test/test_inbound/parser_test_data.csv'));
+    expect(watch(watched, output, processed)).toThrow('Parsed /Users/sheiladuong/iste422/final-exam/test/test_inbound/parser_test_data.csv');
 });
