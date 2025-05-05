@@ -1,10 +1,11 @@
-const { watch } = require('../src/watcher.js');
+const path = require('path');
+const watcher = require('../src/watcher.js');
 
 // correctly outputs that file was parsed
 test('watch correctly outputs that file was parsed', () => {
-    const watched = "/test_inbound";
-    const output = "/test_outbound";
-    const processed = "/test_processed";
+    const watched = path.join(__dirname, '/test_inbound');
+    const output = path.join(__dirname, '/test_outbound');
+    const processed = path.join(__dirname, '/test_processed');
 
-    expect(watch(watched, output, processed)).toThrow('Parsed /Users/sheiladuong/iste422/final-exam/test/test_inbound/parser_test_data.csv');
+    expect(watcher.watch(watched, output, processed)).toThrow('Parsed /Users/sheiladuong/iste422/final-exam/test/test_inbound/parser_test_data.csv');
 });
